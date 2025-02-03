@@ -18,4 +18,6 @@ class GradeBook {
   void setCourseInstructor(const std::string&);
 
   void displayMessage() const;
+
+  void determineClassAverage() const;
 };
