@@ -1,5 +1,6 @@
 #include "gradeBook.h"
 
+#include <iomanip>
 #include <iostream>
 #include <string>
 
@@ -34,7 +35,7 @@ void GradeBook::determineClassAverage() const {
   int total;
   int gradeCount;
   int grade;
-  int average;
+  double average;
 
   total = 0;
   gradeCount = 1;
@@ -46,8 +47,8 @@ void GradeBook::determineClassAverage() const {
     gradeCount += 1;
   }
 
-  average = total / 10;
+  average = static_cast<double>(total) / 10;
 
   std::cout << "\nTotal of all 10 grade is " << total << std::endl;
-  std::cout << "Class average is " << average << std::endl;
+  std::cout << "Class average is " << std::setprecision(2) << std::fixed << average << std::endl;
 }
